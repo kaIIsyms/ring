@@ -18,11 +18,9 @@ features
 
 facts
 
-- this rootkit modify the CR0 register to remove the write protection bit to edit the sys_call_table and then apply the write protection to the kernel mem.
-- this rootkit can remove itself from the responsible linked list.
 - this rootkit can bypass some anti-rootkits like chkrootkit, rkhunter.
 - this rootkit can give remote root shellz.
-- this rootkit can hide tcp/udp connections for netstat.
+- this rootkit can hide ipv4 tcp connections for netstat.
 - this rootkit can detect if the machine is a vm
 
 Copyright (C) <a href="LICENSE">gbr</a> 2023
