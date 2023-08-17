@@ -6,15 +6,13 @@ features
 - [x] give a user root privileges
 - [x] hide itself
 - [x] hide/unhide files and directories
-- [x] hide files in /dev/, /proc/devices, and /sys/class
+- [ ] hide files in /dev/, /proc/devices, and /sys/class
 - [x] hide/unhide processes
-- [x] hide/unhide network connections
-- [x] hidden persistence
+- [ ] hide/unhide network connections
+- [ ] hidden persistence
 - [x] backconnect
-- [x] sniff ssh passwords
-- [x] vm detection
-- [ ] dishwashing
-- [ ] make a monkey speak english
+- [ ] sniff ssh passwords
+- [ ] vm detection
 
 facts
 
