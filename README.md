@@ -14,11 +14,4 @@ features
 - [ ] sniff ssh passwords
 - [ ] vm detection
 
-facts
-
-- this rootkit can bypass some anti-rootkits like chkrootkit, rkhunter.
-- this rootkit can give remote root shellz.
-- this rootkit can hide ipv4 tcp connections for netstat.
-- this rootkit can detect if the machine is a vm
-
 Copyright (C) <a href="LICENSE">gbr</a> 2023
