@@ -12,6 +12,6 @@ features
 - [ ] hidden persistence
 - [x] backconnect
 - [ ] sniff ssh passwords
-- [ ] vm detection
+- [x] vm detection
 
 Copyright (C) <a href="LICENSE">gbr</a> 2023
