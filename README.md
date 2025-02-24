@@ -8,9 +8,8 @@ features
 - [x] give a user root privileges
 - [x] hide itself
 - [x] hide/unhide files and directories
-- [ ] hide files in /dev/, /proc/devices, and /sys/class
 - [x] hide/unhide processes
-- [ ] hide/unhide network connections
+- [x] hide/unhide network connections
 - [ ] hidden persistence
 - [x] backconnect
 - [ ] sniff ssh passwords
