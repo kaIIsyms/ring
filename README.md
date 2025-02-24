@@ -14,5 +14,3 @@ features
 - [x] backconnect
 - [ ] sniff ssh passwords
 - [x] vm detection
-
-Copyright (C) <a href="LICENSE">gbr</a> 2023
